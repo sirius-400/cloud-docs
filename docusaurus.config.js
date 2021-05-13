@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
+  title: 'Travel Partner by Sirius',
   tagline: 'Dinosaurs are cool',
   url: 'https://sirius-400.github.io/cloud-docs',
   baseUrl: '/',
@@ -11,9 +11,9 @@ module.exports = {
   projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Travel Partner by Sirius',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Travel Partner Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -24,7 +24,7 @@ module.exports = {
           label: 'Cloud Docs',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/sirius-400/cloud-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -37,7 +37,7 @@ module.exports = {
           title: 'Cloud Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Overview',
               to: '/docs/overview',
             },
           ],
@@ -49,14 +49,6 @@ module.exports = {
               label: 'Stack Overflow',
               href: 'https://stackoverflow.com/questions/tagged/docusaurus',
             },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
           ],
         },
         {
@@ -64,7 +56,7 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/sirius-400/cloud-docs',
             },
           ],
         },
