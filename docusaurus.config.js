@@ -21,7 +21,7 @@ module.exports = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Cloud Docs',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
