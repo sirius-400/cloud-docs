@@ -20,6 +20,8 @@ function HomepageHeader() {
             Cloud Architecture Overview - 5min ⏱️
           </Link>
         </div>
+				<br></br>
+				<em>Powered by Docusaurus</em>
       </div>
     </header>
   );
