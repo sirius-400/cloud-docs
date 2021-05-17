@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Travel Partner by Sirius',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Your Partner for Local Exploration',
   url: 'https://sirius-400.github.io/cloud-docs',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -63,6 +63,9 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Travel Partner by Sirius, Inc. Built with Docusaurus.`,
     },
+		customFields: {
+			generator: 'Powered by Docusaurus',
+		}
   },
   presets: [
     [
