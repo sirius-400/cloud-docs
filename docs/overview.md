@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Overview
 
-Let's discover **Docusaurus in less than 5 minutes**.
+This page will cover an overview of the cloud computing side of our **capstone project**.
 
 ## Getting Started
 
