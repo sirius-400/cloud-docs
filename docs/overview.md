@@ -9,3 +9,5 @@ This page will cover an overview of the cloud computing side of our **capstone p
 ## Application Architecture
 
 This is our Application Architecture,
+
+![app architecture](/img/overview.png)
