@@ -16,6 +16,8 @@ As you can see, we mainly use GCP to handle our backend. We have 2 cloud functio
 
 ### Cloud Functions Documentation
 
-For the first functions visit [this link](Cloud%20Functions/firestoreScheduler), for the second one visit [this link](Cloud%20Functions/models)
+For the first functions visit [this link](cloud-functions/firestoreScheduler), for the second one visit [this link](cloud-functions/models)
 
 ### Cloud Firestore Documentation
+
+### Enabled API Documentation
