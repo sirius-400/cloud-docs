@@ -21,3 +21,7 @@ For the first functions visit [this link](cloud-functions/firestoreScheduler), f
 ### Cloud Firestore Documentation
 
 ### Enabled API Documentation
+
+### AI Platform Setup Documentation
+
+### Cloud Monitoring Documentation
