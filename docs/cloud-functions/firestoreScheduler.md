@@ -70,7 +70,7 @@ This is my `package.json` file used to build this functions
 ```json title=package.json
 {
   "name": "firestoreScheduler",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "scripts": {
     "lint": "eslint ."
@@ -80,6 +80,7 @@ This is my `package.json` file used to build this functions
     "@google-cloud/firestore": "4.12.2",
     "@google-cloud/functions-framework": "^1.8.0",
     "@google-cloud/storage": "^5.8.5",
+    "json-2-csv": "^3.14.0",
     "semver": "^5.5.1"
   },
   "devDependencies": {
