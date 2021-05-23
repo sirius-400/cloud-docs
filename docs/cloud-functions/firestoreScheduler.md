@@ -67,8 +67,8 @@ This is my `package.json` file used to build this functions
 
 ```json title=package.json
 {
-  "name": "functions",
-  "version": "1.0.0",
+  "name": "firestoreScheduler",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "lint": "eslint ."
@@ -79,6 +79,33 @@ This is my `package.json` file used to build this functions
     "@google-cloud/functions-framework": "^1.8.0",
     "@google-cloud/storage": "^5.8.5",
     "semver": "^5.5.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
+```
+
+## ESLint Config
+
+Enable ESLint to lint your javascript code
+
+```js title=.eslintrc.js
+module.exports = {
+  "root": true,
+  "env": {
+    es6: true,
+    node: true,
+  },
+  "extends": [
+    "eslint:recommended",
+    "google",
+  ],
+  "rules": {
+    quotes: ["error", "double"],
+  },
+  "parser": "babel-eslint",
+};
 ```
