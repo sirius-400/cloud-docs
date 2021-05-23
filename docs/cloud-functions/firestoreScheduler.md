@@ -12,7 +12,7 @@ Create `index.js` and write these code,
 
 ```js title="index.js"
 const Firestore = require("@google-cloud/firestore");
-const {CloudStorage} = require("@google-cloud/storage");
+const {Storage} = require("@google-cloud/storage");
 const BUCKET_NAME = "your-bucket-name";     // Your Bucket Name
 const PROJECTID = "your-bucket-name";       // Your Project ID
 const COLLECTION_NAME = "collection-name";  // Your Collection Name
@@ -20,7 +20,7 @@ const firestore = new Firestore({
   projectId: PROJECTID,
   timestampsInSnapshots: true,
 });
-const storage = new CloudStorage();
+const storage = new Storage();
 const fs = require("fs");
 
 exports.firestoreBackupFunctions = async (context) => {
