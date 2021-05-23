@@ -21,8 +21,12 @@ const firestore = new Firestore({
   timestampsInSnapshots: true,
 });
 const storage = new CloudStorage();
+const fs = require("fs");
+
 exports.firestoreBackupFunctions = async (context) => {
   const unixTimestamp = Date.now();
+  const jsonPath = "/tmp/input.json";
+
   const snapshot = await
   firestore
       .collection(COLLECTION_NAME).get();
@@ -34,12 +38,15 @@ exports.firestoreBackupFunctions = async (context) => {
     testDatas.push({id, ...data});
   });
   console.log(testDatas);
+
+  fs.writeFileSync(jsonPath, JSON.stringify(testDatas));
   
   const bucket = storage.bucket(BUCKET_NAME);
-  const destination = `${directory}${fileName}`;
+  const destination = 'test.json';
+  
   try {
     // Uploads a local file to the bucket
-    await bucket.upload(filePath, {
+    await bucket.upload(jsonPath, {
       destination: destination,
       gzip: true,
       metadata: {
@@ -47,7 +54,7 @@ exports.firestoreBackupFunctions = async (context) => {
       },
     });
 
-    console.log(`${fileName} uploaded to /${directory}${fileName}.`);
+    console.log(`${jsonPath} uploaded to /${destination}.`);
   } catch (e) {
     throw new Error("uploadLocalFileToStorage failed: " + e);
   }
