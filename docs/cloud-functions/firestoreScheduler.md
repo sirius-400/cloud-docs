@@ -12,6 +12,7 @@ Create `index.js` and write these code,
 
 ```js title="index.js"
 const Firestore = require("@google-cloud/firestore");
+const {CloudStorage} = require("@google-cloud/storage");
 const BUCKET_NAME = "your-bucket-name";     // Your Bucket Name
 const PROJECTID = "your-bucket-name";       // Your Project ID
 const COLLECTION_NAME = "collection-name";  // Your Collection Name
@@ -19,7 +20,7 @@ const firestore = new Firestore({
   projectId: PROJECTID,
   timestampsInSnapshots: true,
 });
-const storage = new Storage();
+const storage = new CloudStorage();
 exports.firestoreBackupFunctions = async (context) => {
   const unixTimestamp = Date.now();
   const snapshot = await
@@ -33,7 +34,8 @@ exports.firestoreBackupFunctions = async (context) => {
     testDatas.push({id, ...data});
   });
   console.log(testDatas);
-  
+  const bucket = storage.bucket(BUCKET_NAME);
+  const destination = `${directory}${fileName}`;
 };
 ```
 
@@ -53,6 +55,7 @@ This is my `package.json` file used to build this functions
   "dependencies": {
     "@google-cloud/firestore": "4.12.2",
     "@google-cloud/functions-framework": "^1.8.0",
+    "@google-cloud/storage": "^5.8.5",
     "semver": "^5.5.1"
   }
 }
