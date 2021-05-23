@@ -34,8 +34,23 @@ exports.firestoreBackupFunctions = async (context) => {
     testDatas.push({id, ...data});
   });
   console.log(testDatas);
+  
   const bucket = storage.bucket(BUCKET_NAME);
   const destination = `${directory}${fileName}`;
+  try {
+    // Uploads a local file to the bucket
+    await bucket.upload(filePath, {
+      destination: destination,
+      gzip: true,
+      metadata: {
+        cacheControl: "public, max-age=3600",
+      },
+    });
+
+    console.log(`${fileName} uploaded to /${directory}${fileName}.`);
+  } catch (e) {
+    throw new Error("uploadLocalFileToStorage failed: " + e);
+  }
 };
 ```
 
