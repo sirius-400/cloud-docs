@@ -36,3 +36,24 @@ exports.firestoreBackupFunctions = async (context) => {
   
 };
 ```
+
+## Package file
+
+This is my `package.json` file used to build this functions
+
+```json title=package.json
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/firestore": "4.12.2",
+    "@google-cloud/functions-framework": "^1.8.0",
+    "semver": "^5.5.1"
+  }
+}
+```
