@@ -1,1 +1,38 @@
- 
+---
+sidebar_position: 1
+---
+
+# Firestore Scheduler
+
+This functions is the one that we use for automating backup and get raw data from Firestore to be processed by ML in AI Platform.
+
+## Index File
+
+Create `index.js` and write these code,
+
+```js title="index.js"
+const Firestore = require("@google-cloud/firestore");
+const BUCKET_NAME = "your-bucket-name";     // Your Bucket Name
+const PROJECTID = "your-bucket-name";       // Your Project ID
+const COLLECTION_NAME = "collection-name";  // Your Collection Name
+const firestore = new Firestore({
+  projectId: PROJECTID,
+  timestampsInSnapshots: true,
+});
+const storage = new Storage();
+exports.firestoreBackupFunctions = async (context) => {
+  const unixTimestamp = Date.now();
+  const snapshot = await
+  firestore
+      .collection(COLLECTION_NAME).get();
+
+  const testDatas = [];
+  snapshot.forEach((doc) => {
+    const id = doc.id;
+    const data = doc.data();
+    testDatas.push({id, ...data});
+  });
+  console.log(testDatas);
+  
+};
+```
