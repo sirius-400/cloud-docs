@@ -21,11 +21,13 @@ const firestore = new Firestore({
   timestampsInSnapshots: true,
 });
 const storage = new Storage();
+const converter = require("json-2-csv");
 const fs = require("fs");
 
 exports.firestoreBackupFunctions = async (context) => {
   const unixTimestamp = Date.now();
   const jsonPath = "/tmp/input.json";
+  const csvPath = "/tmp/input.csv";
 
   const snapshot = await
   firestore
