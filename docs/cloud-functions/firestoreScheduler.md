@@ -62,8 +62,11 @@ exports.firestoreBackupFunctions = async (context) => {
   }
 };
 
-async function uploadLocalFileToStorage() {
+async function uploadLocalFileToStorage(filePath, fileName, dir="data/") {
+  const directory = dir;
 
+  const bucket = storage.bucket(BUCKET_NAME);
+  const destination = `${directory}${fileName}`;
   try {
     // Uploads a local file to the bucket
     await bucket.upload(jsonPath, {
