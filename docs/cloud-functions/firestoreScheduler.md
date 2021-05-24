@@ -69,8 +69,8 @@ This is my `package.json` file used to build this functions
 
 ```json title=package.json
 {
-  "name": "firestoreScheduler",
-  "version": "1.2.0",
+  "name": "functions",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "lint": "eslint ."
@@ -111,4 +111,30 @@ module.exports = {
   },
   "parser": "babel-eslint",
 };
+```
+
+## Create .gcloudignore file
+
+Create this file to ignore what file to be uploaded.
+
+```text
+# This file specifies files that are *not* uploaded to Google Cloud Platform
+# using gcloud. It follows the same syntax as .gitignore, with the addition of
+# "#!include" directives (which insert the entries of the given .gitignore-style
+# file at that point).
+#
+# For more information, run:
+#   $ gcloud topic gcloudignore
+#
+.gcloudignore
+# If you would like to upload your .git directory, .gitignore file or files
+# from your .gitignore file, remove the corresponding line
+# below:
+.git
+.gitignore
+apackage.json
+index_bak.js
+node_modules/
+
+#!include:.gitignore
 ```
