@@ -138,3 +138,12 @@ node_modules/
 
 #!include:.gitignore
 ```
+
+## Create .gitignore file
+
+Create this file to ignore what file to be uploaded.
+
+```text
+node_modules/
+*.log
+```
