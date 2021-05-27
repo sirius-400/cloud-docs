@@ -42,7 +42,7 @@ exports.firestoreBackupFunctions = async (context) => {
   console.log(testDatas);
 
   fs.writeFileSync(jsonPath, JSON.stringify(testDatas));
-
+  const inputFile = JSON.parse(fs.readFileSync(jsonPath));
 };
 
 /**
