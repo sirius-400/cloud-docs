@@ -45,6 +45,12 @@ exports.firestoreBackupFunctions = async (context) => {
 
 };
 
+/**
+ * uploadCsvFile.
+ * @param {string} filePath file path in local.
+ * @param {string} fileName file name in cloud storage.
+ * @param {string} dir cloud storage target directory 
+ */
 async function uploadLocalFileToStorage(filePath, fileName, dir="data/") {
   const directory = dir;
 
