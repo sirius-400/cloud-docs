@@ -43,6 +43,16 @@ exports.firestoreBackupFunctions = async (context) => {
 
   fs.writeFileSync(jsonPath, JSON.stringify(testDatas));
   const inputFile = JSON.parse(fs.readFileSync(jsonPath));
+  (async () => {
+    try {
+      const csv = await converter.json2csvAsync(inputFile);
+      fs.writeFileSync(csvPath, csv);
+      await uploadLocalFileToStorage(
+          csvPath, "input.csv");
+    } catch (err) {
+      console.error(err);
+    }
+  })();
 };
 
 /**
