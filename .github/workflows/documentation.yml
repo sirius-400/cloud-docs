@@ -39,7 +39,7 @@ jobs:
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
-          GIT_USER: git
+          GIT_USER: mohzulfikar
         run: |
           git config --global user.email "48849323+mohzulfikar@users.noreply.github.com"
           git config --global user.name "Mohammad Zulfikar"
