@@ -138,7 +138,7 @@ module.exports = {
 
 Create this file to ignore what file to be uploaded.
 
-```text
+```text title=.gcloudignore
 # This file specifies files that are *not* uploaded to Google Cloud Platform
 # using gcloud. It follows the same syntax as .gitignore, with the addition of
 # "#!include" directives (which insert the entries of the given .gitignore-style
@@ -164,7 +164,7 @@ node_modules/
 
 Create this file to ignore what file to be uploaded.
 
-```text
+```text title=.gitignore
 node_modules/
 *.log
 ```
@@ -173,3 +173,6 @@ node_modules/
 
 You can deploy this functons on the cloud (gcp) using `gcloud` command.
 
+### Create a New PubSub Topic
+
+Go to the gcp console or using the `admin SDK`, create new PubSub topic named `firestoreScheduler` or whatever name you want.
