@@ -176,3 +176,12 @@ You can deploy this functons on the cloud (gcp) using `gcloud` command.
 ### Create a New PubSub Topic
 
 Go to the gcp console or using the `admin SDK`, create new PubSub topic named `firestoreScheduler` or whatever name you want.
+
+```bash
+### Create PubSub topics
+gcloud pubsub topics create firestoreScheduler
+```
+
+### Create Subscription to PubSub Topic
+
+Create a new subscription to the topic we created earlier.
