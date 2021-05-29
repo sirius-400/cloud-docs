@@ -168,3 +168,8 @@ Create this file to ignore what file to be uploaded.
 node_modules/
 *.log
 ```
+
+## Deploy your functions
+
+You can deploy this functons on the cloud (gcp) using `gcloud` command.
+
