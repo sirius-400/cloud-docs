@@ -39,7 +39,6 @@ exports.firestoreBackupFunctions = async (context) => {
     const data = doc.data();
     testDatas.push({id, ...data});
   });
-  console.log(testDatas);
 
   fs.writeFileSync(jsonPath, JSON.stringify(testDatas));
   const inputFile = JSON.parse(fs.readFileSync(jsonPath));
@@ -67,9 +66,10 @@ async function uploadLocalFileToStorage(filePath, fileName, dir="data/") {
 
   const bucket = storage.bucket(BUCKET_NAME);
   const destination = `${directory}${fileName}`;
+
   try {
     // Uploads a local file to the bucket
-    await bucket.upload(jsonPath, {
+    await bucket.upload(filePath, {
       destination: destination,
       gzip: true,
       metadata: {
@@ -77,7 +77,7 @@ async function uploadLocalFileToStorage(filePath, fileName, dir="data/") {
       },
     });
 
-    console.log(`${jsonPath} uploaded to /${destination}.`);
+    console.log(`${fileName} uploaded to /${directory}${fileName}.`);
   } catch (e) {
     throw new Error("uploadLocalFileToStorage failed: " + e);
   }
