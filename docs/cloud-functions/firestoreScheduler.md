@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Firestore Scheduler
 
+![function overview](/img/firestoreScheduler/overview.png)
+
 This functions is the one that we use for automating backup and get raw data from Firestore to be processed by ML in AI Platform.
 
 ## Index File
