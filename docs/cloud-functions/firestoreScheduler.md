@@ -201,12 +201,12 @@ gcloud functions deploy firestoreBackupFunctions --trigger-topic=firestoreSchedu
 
 After the deploying the functions, don't forget to create new Cloud Scheduler job.
 
-![create new cloud scheduler](/img/cloud/400-capstone-scheduler-001.png)
+![create new cloud scheduler](/img/firestoreScheduler/400-capstone-scheduler-001.png)
 
-![first cloud scheduler config](/img/cloud/400-capstone-scheduler-002.png)
+![first cloud scheduler config](/img/firestoreScheduler/400-capstone-scheduler-002.png)
 
-![second cloud scheduler config](/img/cloud/400-capstone-scheduler-003.png)
+![second cloud scheduler config](/img/firestoreScheduler/400-capstone-scheduler-003.png)
 
-![third cloud scheduler config](/img/cloud/400-capstone-scheduler-004.png)
+![third cloud scheduler config](/img/firestoreScheduler/400-capstone-scheduler-004.png)
 
 > Thats it! Your functions are good to go for now.
