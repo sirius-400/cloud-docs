@@ -178,10 +178,35 @@ You can deploy this functons on the cloud (gcp) using `gcloud` command.
 Go to the gcp console or using the `admin SDK`, create new PubSub topic named `firestoreScheduler` or whatever name you want.
 
 ```bash
-### Create PubSub topics
 gcloud pubsub topics create firestoreScheduler
 ```
 
 ### Create Subscription to PubSub Topic
 
 Create a new subscription to the topic we created earlier.
+
+```bash
+gcloud pubsub subscripsions create scheduler-sub --topic firestoreScheduler
+```
+
+### Deploy Functions
+
+Deploy the functions with `gcloud functions deploy` command.
+
+```bash
+gcloud functions deploy firestoreBackupFunctions --trigger-topic=firestoreScheduler --runtime=nodejs14 --region=asia-southeast2
+```
+
+### Create New Cloud Scheduler Job
+
+After the deploying the functions, don't forget to create new Cloud Scheduler job.
+
+![create new cloud scheduler](/img/cloud/400-capstone-scheduler-001.png)
+
+![first cloud scheduler config](/img/cloud/400-capstone-scheduler-002.png)
+
+![second cloud scheduler config](/img/cloud/400-capstone-scheduler-003.png)
+
+![third cloud scheduler config](/img/cloud/400-capstone-scheduler-004.png)
+
+> Thats it! Your functions are good to go for now.
