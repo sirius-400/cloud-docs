@@ -113,9 +113,6 @@ Create this file to ignore what file to be uploaded.
 #   $ gcloud topic gcloudignore
 #
 .gcloudignore
-# If you would like to upload your .git directory, .gitignore file or files
-# from your .gitignore file, remove the corresponding line
-# below:
 .git
 .gitignore
 apackage.json

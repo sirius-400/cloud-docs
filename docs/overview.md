@@ -18,9 +18,19 @@ As you can see, we mainly use GCP to handle our backend. We have 2 cloud functio
 
 For the first functions visit [this link](cloud-functions/firestoreScheduler), for the second one visit [this link](cloud-functions/models)
 
-### Cloud Firestore Documentation
+### Cloud Firestore
 
-### Enabled API Documentation
+We use Firestore for our database to store user data and place data. We create auto backup using Cloud Functions to backup place data everyday so that it can be used for retraining our models.
+
+### Enabled API for Google Maps Platform
+
+We use several API in Google Maps Platform for our projects,
+
+1. Maps SDK for Android
+2. Direction API
+3. Places API
+
+Other API used are Google Cloud API mainly for handling compute resource (Compute API, App Engine API), AI Platform Notebook (Notebook API), and Storage (Cloud Storage API).
 
 ### AI Platform Setup Documentation
 
