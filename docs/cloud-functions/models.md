@@ -14,7 +14,7 @@ Create `index.js` and write these code,
 
 ```js title="index.js"
 const {Storage} = require("@google-cloud/storage");
-const BUCKET_NAME = "bangkit-capstone-400.appspot.com";
+const BUCKET_NAME = "YOUR_BUCKET_NAME";
 const storage = new Storage();
 const fs = require("fs");
 
@@ -134,3 +134,12 @@ node_modules/
 *.log
 ```
 
+## Deploy your functions
+
+Deploy your functons on the cloud using `gcloud` command,
+
+```bash
+gcloud functions deploy models --trigger-http --runtinme=nodejs14 --region=asia-southeast2
+```
+
+> Thats it! Your functions are good to go!
