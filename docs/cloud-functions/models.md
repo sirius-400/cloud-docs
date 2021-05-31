@@ -44,3 +44,31 @@ exports.models = async (request, response) => {
   }
  };
 ```
+
+## Package file
+
+This is my `package.json` file used to build this functions
+
+```json title=package.json
+{
+  "name": "model",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/firestore": "4.12.2",
+    "@google-cloud/functions-framework": "^1.8.0",
+    "@google-cloud/storage": "^5.8.5",
+    "json-2-csv": "^3.14.0",
+    "semver": "^5.5.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
+```
