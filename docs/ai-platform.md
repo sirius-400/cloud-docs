@@ -2,8 +2,15 @@
 sidebar_position: 3
 ---
 
-# AI PLatform Setup
+# AI Platform Setup
 
-This page will cover an overview of the cloud computing side of our **capstone project**.
+![AI Platform overview](/img/ai-platform/overview.png)
 
-## Application Architecture
+This page will cover the setup of our AI Platform.
+
+## Create New Notebook
+
+
+## Allow ML Team to Access the Resources
+
+By default, AI Platform only allows Project Editor to access the Notebook. However, we can use AI Platform service account to add other user to access the resource. This is also allign with the principle of least privilege that only allows user to access the required previledges.
