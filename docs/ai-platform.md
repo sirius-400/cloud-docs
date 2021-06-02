@@ -10,6 +10,7 @@ This page will cover the setup of our AI Platform.
 
 ## Create New Notebook
 
+On the Cloud Console, click on AI Platform and select Notebook. Create new Notebook with the specification you need, in our case we use AI Platform with Tensorflow version 2.5.
 
 ## Allow ML Team to Access the Resources
 
