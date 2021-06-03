@@ -21,3 +21,9 @@ By default, AI Platform only allows Project Editor to access the Notebook. Howev
 First go to IAM and Service Account tab, create new service account (we named it customSA). Add new access (grant access) and add the role "AI Platform Notebook Service Agent" to our customSA.
 
 ![add ai platform sa](/img/ai-platform/002.png)
+
+After that, just add new member and grant access to act as "Service Account User".
+
+![add ai platform user](/img/ai-platform/003.png)
+
+> Done! Your ML team now should be able to access the AI Platform via Google Cloud Console.
