@@ -34,8 +34,8 @@ Other API used are Google Cloud API mainly for handling compute resource (Comput
 
 ### AI Platform Setup Documentation
 
-Visit [this link](cloud-monitoring)
+Visit [this link](ai-platform).
 
 ### Cloud Monitoring Documentation
 
-Visit [this link](cloud-monitoring)
+Visit [this link](cloud-monitoring).
