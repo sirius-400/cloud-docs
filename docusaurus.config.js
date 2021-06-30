@@ -7,7 +7,7 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'opensource.poros-cys.com', // Usually your GitHub org/user name.
+  organizationName: 'sirius-400', // Usually your GitHub org/user name.
   projectName: 'cloud-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
