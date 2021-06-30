@@ -3,7 +3,7 @@ module.exports = {
   title: 'Travel Partner by Sirius',
   tagline: 'Your Partner for Local Exploration',
   url: 'https://opensource.poros-cys.com/cloud-docs',
-  baseUrl: '/cloud-docs',
+  baseUrl: '/cloud-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
