@@ -3,11 +3,11 @@ module.exports = {
   title: 'Travel Partner by Sirius',
   tagline: 'Your Partner for Local Exploration',
   url: 'https://opensource.poros-cys.com/cloud-docs',
-  baseUrl: '/',
+  baseUrl: '/cloud-docs',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'sirius-400', // Usually your GitHub org/user name.
+  organizationName: 'opensource.poros-cys.com', // Usually your GitHub org/user name.
   projectName: 'cloud-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
